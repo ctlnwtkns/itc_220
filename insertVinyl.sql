@@ -13,30 +13,30 @@
 --10. Ibeyi, 'Ibeyi'
 
 
-INSERT INTO Artist (ArtistKey, ArtistNameLast, ArtistNameFirst)
+INSERT INTO Artist (artistKey, artistNameLast, artistNameFirst, artistAlias)
 VALUES 
-(DEFAULT, ‘Barnett’, ‘Courtney’), 
-(DEFAULT, ‘Stevens’, ‘Sufjan’),
-(DEFAULT, ‘Eskimeuax’, NULL),
-(DEFAULT, ‘Shelly’, ‘Joan’),
-(DEFAULT, ‘Torres’, NULL),
-(DEFAULT, ‘Bjork’, NULL),
-(DEFAULT, ‘SOAK’, NULL),
-(DEFAULT, ‘Arnalds’, ‘Olafur’),
-(DEFAULT, ‘Ott’, ‘AliceSara’),
-(DEFAULT, ‘Girlpool’, NULL),
-(DEFAULT, ‘Ibeyi’, NULL)
+(DEFAULT, Barnett, 'Courtney', 'NULL'), 
+(DEFAULT, Stevens, Sufjan),
+(DEFAULT, Eskimeuax, NULL),
+(DEFAULT, Shelly, 'Joan'),
+(DEFAULT, 'Torres', NULL),
+(DEFAULT, Bjork, NULL, NULL),
+(DEFAULT, NULL, NULL, 'SOAK'),
+(DEFAULT, 'Arnalds, Olafur'),
+(DEFAULT, 'Ott', AliceSara', NULL),
+(DEFAULT, NULL, NULL, 'Girlpool'),
+(DEFAULT, 'Ibeyi', NULL)
 
-INSERT INTO Album (DEFAULT, AlbumName, catalogNo, storeItemNo)
+INSERT INTO Album (DEFAULT, AlbumName, catalogNo, storeItemNo, sizeKey, speedKey)
 VALUES 
-(‘Sometimes I Sit and Think, And Sometimes I Just Sit’, ,), 
-( 'Carrie & Lowell', ,),
-( 'O.K.', ,),
-( 'Over And Even', ,),
+('Sometimes I Sit and Think, And Sometimes I Just Sit', ,), 
+('Carrie & Lowell', ,),
+('O.K.', ,),
+('Over And Even', ,),
 ('Sprinter', ,),
-( 'Vulnicura', ,),
+('Vulnicura', ,),
 ('Before We Forgot How To Dream', ,),
 ('The Chopin Project’, ,),
 ('The Chopin Project’, ,),
-( 'Before The World Was Big', ,),
+('Before The World Was Big', ,),
 ('Ibeyi', ,)
