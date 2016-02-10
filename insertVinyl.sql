@@ -40,3 +40,19 @@ VALUES
 ('The Chopin Project’, ,),
 ('Before The World Was Big', ,),
 ('Ibeyi', ,)
+
+INSERT INTO Customer (DEFAULT, CustomerKey,customerLastName, customerFirstName, customerAddress, customerCity, customerState, customerZip, customerPhone, customerEmail) 
+VALUES 
+(DEFAULT, 'Doe’, ’Jane’, ’123 Fake St’, ’Tampa’, ‘FL’, ‘33617’, ‘813-998-2199’, ‘janed@gmail.com’), 
+(DEFAULT, 'Doe’, ’Joe’, ’123 Fake St’, ’Tampa’, ‘FL’, ‘33617’, ‘813-998-2101’, ‘joedoe@gmail.com’),
+(DEFAULT, 'Brady’, ’Marsha’, ’12568 Real St’, ’Seattle’, ‘WA’, ‘98101’, ‘206-397-1000’, ‘marshamarshamarsha@gmail.com’),
+(DEFAULT, 'Brady’, ’Bobby’, ’12568 Real St’, ’Seattle’, ‘WA’, ‘98101’, ‘206-397-1001’, ‘bobbyb@gmail.com’),
+(DEFAULT, 'Brady’, ’Greg’, ’12568 Real St’, ’Seattle’, ‘WA’, ‘98101’, ‘206-397-1002’, ‘bradybunchrulz@gmail.com’),
+(DEFAULT, ‘Brady’, ’Tiger’, ’12568 Real St’, ’Seattle’, ‘WA’, ‘98101’, ‘206-397-1003’, ‘tigerthedog@gmail.com’),
+(DEFAULT, 'Connor’, ’Roseanne’, ’714 Delaware St’, ’Landford’, ‘IL’, ‘60290’, ‘773-978-2159’, ‘roseanneconway@gmail.com’),
+(DEFAULT, 'Connor’, ’Dan’, ’714 Delaware St’, ’Landford’, ‘IL’, ‘60290’, ‘773-978-6669’, ‘yor@gmail.com’),
+(DEFAULT, 'Connor’, ’Darlene’, ’714 Delaware St’, ’Landford’, ‘IL’, ‘60290’, ‘773-918-2169’, ‘saragilbert@gmail.com’),
+(DEFAULT, 'Connor’, ’Becky’, ’714 Delaware St’, ’Landford’, ‘IL’, ‘60290’, ‘813-998-1239’, ‘whichbeckyami@gmail.com’),
+(DEFAULT, 'Simpson’, ’Homer’, ’742 Evergreen Ter’, ’Springfield’, ‘OR’, ‘97477’‘541-123-4567’, ‘chunkylover53@aol.com’),
+(DEFAULT, 'Simpson’, ’Lisa’, ’742 Evergreen Ter’, ’Springfield’, ‘OR’, ‘97477’, ‘541-123-7654’, ‘smartgirl63@yahoo.com’),
+(DEFAULT, 'Simpson’, ’Bart’, ’742 Evergreen Ter’, ’Springfield’, ‘OR’, ‘97477’, ‘541-123-9999’, ‘bart.simpson@hotmail.com’)
