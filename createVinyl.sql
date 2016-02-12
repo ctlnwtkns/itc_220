@@ -59,9 +59,9 @@ Create table ArtistGenre
 Create table Quality
   	(
 	qualityKey int IDENTITY(1,1) PRIMARY KEY,
-	qualityMeasure varchar(255) NOT NULL,
-	qualityDescription varchar(255) NOT NULL,    
+	weight varchar(255) NOT NULL,
   	)
+  	
 Create table AlbumQuality
 	(
 	albumKey int REFERENCES Album(albumKey),
