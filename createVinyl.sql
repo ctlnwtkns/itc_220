@@ -6,7 +6,7 @@ create table Artist
 	artistNameLast varchar(255),
 	artistNameFirst varchar(255),
 	artistAlias varchar(255)
-  )
+	)
 
 create table Genre
 	(
@@ -38,8 +38,8 @@ Create table Album
 	albumName varchar(255) NOT NULL,
 	catalogNo varchar(255) NOT NULL,
 	storeItemNo varchar(255) NOT NULL,
-	sizeKey varchar(255) REFERENCES Size(sizeKey)
-	speedKey varchar(255) REFERENCES Speed(speedKey)
+	sizeKey int REFERENCES Size(sizeKey)
+	speedKey int REFERENCES Speed(speedKey)
 	)
 
 Create table ArtistAlbum
@@ -57,12 +57,12 @@ Create table ArtistGenre
 	)
 
 Create table Quality
-  (
+  	(
 	qualityKey int IDENTITY(1,1) PRIMARY KEY,
 	qualityMeasure varchar(255) NOT NULL,
 	qualityDescription varchar(255) NOT NULL,    
-  )
-Ccreate table AlbumQuality
+  	)
+Create table AlbumQuality
 	(
 	albumKey int REFERENCES Album(albumKey),
 	qualityKey int REFERENCES Quality(qualityKey),
@@ -70,19 +70,19 @@ Ccreate table AlbumQuality
 	)
 
 Create table CoverCondition
-  (
+  	(
 	albumKey int REFERENCES Album(albumKey),
 	qualityKey int REFERENCES Quality(qualityKey),
-  sizeKey varchar REFERENCES Size(sizeKey),
+	sizeKey varchar REFERENCES Size(sizeKey),
 	PRIMARY KEY(albumKey , qualityKey , sizeKey)
-  )
+  	)
 
 Create table AlbumYear
-  (
+  	(
 	albumKey int REFERENCES Album(albumKey),
 	releaseDateKey int REFERENCES ReleaseDate(releaseDateKey),
 	PRIMARY KEY(albumKey , releaseDateKey )
-  )
+  	)
 
 
 Create table Customer
@@ -91,28 +91,28 @@ Create table Customer
 	customerLastName varchar(255) NOT NULL,
 	customerFirstName varchar(255) NOT NULL,
 	customerAddress varchar(255),
-  customerCity varchar(255),
-  customerState varchar(255),
-  customerZip varchar(255),
-  customerPhone varchar(255),
-  customerEmail varchar(255) 
+	customerCity varchar(255),
+  	customerState varchar(255),
+  	customerZip varchar(255),
+  	customerPhone varchar(255),
+  	customerEmail varchar(255) 
 	)
 
 Create table Employee
-  (
-  employeeKey int IDENTITY(1,1) PRIMARY KEY,
+  	(
+  	employeeKey int IDENTITY(1,1) PRIMARY KEY,
 	employeeNameFirst varchar(255) NOT NULL,
 	employeeNameLast varchar(255) NOT NULL
-  )
+  	)
 
 
 Create table PointOfSale
 	(
-	pointofsaleKey int IDENTITY(1,1) PRIMARY KEY,
+	posKey int IDENTITY(1,1) PRIMARY KEY,
 	posLocation varchar(255) NOT NULL,
-	posDateTime varchar(255) NOT NULL,
+	posDateTime timestamp NOT NULL,
 	posID varchar(255) NOT NULL,
-  customerKey int REFERENCES Customer(customerKey),
+  	customerKey int REFERENCES Customer(customerKey),
 	employeeKey int REFERENCES Employee(employeeKey),
 	)	
 
@@ -122,6 +122,6 @@ Create table SalesDetail
 	albumKey int REFERENCES Album(albumKey),
 	salesQty int NOT NULL,
 	salesTax decimal NOT NULL,
-  salesPrice decimal NOT NULL,
+  	salesPrice decimal NOT NULL,
 	pointofsaleKey int REFERENCES PointOfSale(pointofsaleKey)
 	)
