@@ -12,34 +12,74 @@
 --9. Girlpool, 'Before The World Was Big'
 --10. Ibeyi, 'Ibeyi'
 
-
+--artist test data
 INSERT INTO Artist (artistKey, artistNameLast, artistNameFirst, artistAlias)
 VALUES 
-(DEFAULT, Barnett, 'Courtney', 'NULL'), 
-(DEFAULT, Stevens, Sufjan),
-(DEFAULT, Eskimeuax, NULL),
-(DEFAULT, Shelly, 'Joan'),
-(DEFAULT, 'Torres', NULL),
-(DEFAULT, Bjork, NULL, NULL),
-(DEFAULT, NULL, NULL, 'SOAK'),
-(DEFAULT, 'Arnalds, Olafur'),
-(DEFAULT, 'Ott', AliceSara', NULL),
-(DEFAULT, NULL, NULL, 'Girlpool'),
-(DEFAULT, 'Ibeyi', NULL)
+(DEFAULT, 'Barnett', 'Courtney', 'NULL'), 
+(DEFAULT, 'Stevens', 'Sufjan', NULL),
+(DEFAULT, 'Smith', 'Gabrielle', 'Eskimeuax'),
+(DEFAULT, 'Kalb', 'Oliver', 'Eskimeuax'),
+(DEFAULT, 'Walworth', 'Felix', 'Eskimeuax'),
+(DEFAULT, 'Greenleaf', 'Jack', 'Eskimeuax'),
+(DEFAULT, 'Shelly', 'Joan', NULL),
+(DEFAULT, 'Scott', 'Mackenzie', 'Torres'),
+(DEFAULT, 'Guðmundsdóttir', 'Björk', 'Björk'),
+(DEFAULT, 'Monds-Watson', 'Bridie', 'SOAK'),
+(DEFAULT, 'Arnalds', 'Ólafur', NULL),
+(DEFAULT, 'Ott', 'Alice Sara', NULL),
+(DEFAULT, 'Tucker', 'Cleo', 'Girlpool'),
+(DEFAULT, 'Tividad', ' Harmony', 'Girlpool'),
+(DEFAULT, 'Diaz', 'Lisa-Kaindé', 'Ibeyi'),
+(DEFAULT, 'Diaz', 'Naomi', 'Ibeyi')
 
-INSERT INTO Album (DEFAULT, AlbumName, catalogNo, storeItemNo, sizeKey, speedKey)
+--speed look-up
+--https://rateyourmusic.com/wiki/Music:Release+attributes#Speed
+INSERT INTO Speed (speedKey, speed)
+VALUES
+(DEFAULT, '16 rpm'),
+(DEFAULT, '33 rpm'), 
+(DEFAULT, '45 rpm'), 
+(DEFAULT, '78 rpm'), 
+(DEFAULT, '80 rpm'), 
+(DEFAULT, '3¾ IPS'), 
+(DEFAULT, '7½ IPS') 
+
+
+
+--size look-up
+--http://xvinylx.com/wiki/Record_size
+INSERT INTO Size (sizeKey, size)
+VALUES
+(DEFAULT, '7 inch'),
+(DEFAULT, '10 inch'),
+(DEFAULT, '12 inch')
+
+--quality look-up
+--https://rateyourmusic.com/wiki/Music:Release+attributes#Quality
+INSERT INTO Quality (qualityKey, weight)
+VALUES
+(DEFAULT, '120 gram'),
+(DEFAULT, '140 gram'),
+(DEFAULT, '150 gram'),
+(DEFAULT,' 160 gram'),
+(DEFAULT, '180 gram'),
+(DEFAULT, '200 gram'),
+(DEFAULT, '220 gram')
+
+
+--album test data
+INSERT INTO Album (albumKey, albumName, catalogNo, storeItemNo, speedKey, sizeKey)
 VALUES 
-('Sometimes I Sit and Think, And Sometimes I Just Sit', ,), 
-('Carrie & Lowell', ,),
-('O.K.', ,),
-('Over And Even', ,),
-('Sprinter', ,),
-('Vulnicura', ,),
-('Before We Forgot How To Dream', ,),
-('The Chopin Project’, ,),
-('The Chopin Project’, ,),
-('Before The World Was Big', ,),
-('Ibeyi', ,)
+(DEFAULT, 'Sometimes I Sit and Think, And Sometimes I Just Sit', ),
+(DEFAULT, 'Carrie & Lowell', ),
+(DEFAULT, 'O.K.', ),
+(DEFAULT, 'Over And Even', ),
+(DEFAULT, 'Sprinter', ),
+(DEFAULT, 'Vulnicura', ),
+(DEFAULT, 'Before We Forgot How To Dream', ),
+(DEFAULT, 'The Chopin Project', ),
+(DEFAULT, 'Before The World Was Big', ),
+(DEFAULT, 'Ibeyi', )
 
 --Customer test data
 INSERT INTO Customer (CustomerKey,customerLastName, customerFirstName, customerAddress, customerCity, customerState, customerZip, customerPhone, customerEmail) 
