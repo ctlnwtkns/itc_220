@@ -123,5 +123,5 @@ Create table SalesDetail
 	salesQty int NOT NULL,
 	salesTax decimal NOT NULL,
   	salesPrice decimal NOT NULL,
-	pointofsaleKey int REFERENCES PointOfSale(pointofsaleKey)
+	posKey int REFERENCES PointOfSale(posKey)
 	)
