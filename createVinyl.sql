@@ -38,7 +38,7 @@ Create table Album
 	albumName varchar(255) NOT NULL,
 	catalogNo varchar(255) NOT NULL,
 	storeItemNo varchar(255) NOT NULL,
-	sizeKey int REFERENCES Size(sizeKey)
+	sizeKey int REFERENCES Size(sizeKey),
 	speedKey int REFERENCES Speed(speedKey)
 	)
 
@@ -73,7 +73,7 @@ Create table CoverCondition
   	(
 	albumKey int REFERENCES Album(albumKey),
 	qualityKey int REFERENCES Quality(qualityKey),
-	sizeKey varchar REFERENCES Size(sizeKey),
+	sizeKey int REFERENCES Size(sizeKey),
 	PRIMARY KEY(albumKey , qualityKey , sizeKey)
   	)
 
