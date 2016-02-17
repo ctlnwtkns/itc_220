@@ -113,7 +113,7 @@ Create table PointOfSale
 	posDateTime smalldatetime NOT NULL,
 	posID varchar(255) NOT NULL,
   	customerKey int REFERENCES Customer(customerKey),
-	employeeKey int REFERENCES Employee(employeeKey),
+	employeeKey int REFERENCES Employee(employeeKey)
 	)	
 
 Create table SalesDetail
