@@ -139,8 +139,8 @@ VALUES
 INSERT INTO CoverCondition (rating, description)
 VALUES
 ('5', 'New'), --1
-('4', 'Like new), --2
-('3', 'Good'), --3
+('4', 'Like new'), --2
+('3', 'Good') --3
 
 INSERT INTO AlbumCondition (rating, description)
 ('Mint','perfect or near perfect'), --1
