@@ -56,33 +56,33 @@ VALUES
 --https://rateyourmusic.com/wiki/Music:Release+attributes#Speed
 INSERT INTO Speed (speedKey, speed)
 VALUES
-(DEFAULT, '16 rpm'),
-(DEFAULT, '33 rpm'), 
-(DEFAULT, '45 rpm'), 
-(DEFAULT, '78 rpm'), 
-(DEFAULT, '80 rpm'), 
-(DEFAULT, '3¾ IPS'), 
-(DEFAULT, '7½ IPS') 
+(DEFAULT, '16 rpm'), --1
+(DEFAULT, '33 rpm'), --2
+(DEFAULT, '45 rpm'), --3
+(DEFAULT, '78 rpm'), --4
+(DEFAULT, '80 rpm'), --5
+(DEFAULT, '3¾ IPS'), --6
+(DEFAULT, '7½ IPS') --7
 
 --size look-up
 --http://xvinylx.com/wiki/Record_size
 INSERT INTO Size (sizeKey, size)
 VALUES
-(DEFAULT, '7 inch'),
-(DEFAULT, '10 inch'),
-(DEFAULT, '12 inch')
+(DEFAULT, '7 inch'), --1
+(DEFAULT, '10 inch'), --2
+(DEFAULT, '12 inch') --3
 
 --quality look-up
 --https://rateyourmusic.com/wiki/Music:Release+attributes#Quality
 INSERT INTO Quality (qualityKey, weight)
 VALUES
-(DEFAULT, '120 gram'),
-(DEFAULT, '140 gram'),
-(DEFAULT, '150 gram'),
-(DEFAULT,' 160 gram'),
-(DEFAULT, '180 gram'),
-(DEFAULT, '200 gram'),
-(DEFAULT, '220 gram')
+(DEFAULT, '120 gram'), --1
+(DEFAULT, '140 gram'), --2
+(DEFAULT, '150 gram'), --3
+(DEFAULT,' 160 gram'), --4
+(DEFAULT, '180 gram'), --5
+(DEFAULT, '200 gram'), --6
+(DEFAULT, '220 gram')  --7
 
 --album test data
 INSERT INTO Album (albumKey, albumName, catalogNo, storeItemNo, speedKey, sizeKey)
@@ -172,50 +172,50 @@ VALUES
 --Customer test data
 INSERT INTO Customer (CustomerKey,customerLastName, customerFirstName, customerAddress, customerCity, customerState, customerZip, customerPhone, customerEmail) 
 VALUES 
-(DEFAULT, 'Doe', 'Jane', '123 Fake St', 'Tampa', 'FL', '33617', '813-998-2199', 'janed@gmail.com', 
-(DEFAULT, 'Doe', 'Joe', '123 Fake St', 'Tampa', 'FL', '33617', '813-998-2101', 'joedoe@gmail.com'),
-(DEFAULT, 'Brady', 'Marsha', '12568 Real St', 'Seattle', 'WA', '98101', '206-397-1000', 'marshamarshamarsha@gmail.com'),
-(DEFAULT, 'Brady', 'Bobby', '12568 Real St', 'Seattle', 'WA', '98101', '206-397-1001', 'bobbyb@gmail.com'),
-(DEFAULT, 'Brady', 'Greg', '12568 Real St', 'Seattle', 'WA', '98101', '206-397-1002', 'bradybunchrulz@gmail.com'),
-(DEFAULT, 'Brady', 'Tiger', '12568 Real St', 'Seattle', 'WA', '98101', '206-397-1003', 'tigerthedog@gmail.com'),
-(DEFAULT, 'Connor', 'Roseanne', '714 Delaware St', 'Landford', 'IL', '60, '773-978-6669', 'yor@gmail.com'),
-(DEFAULT, 'Connor', 'Darlene', '714 Delaware St', 'Landford', 'IL', '60290', '773-918-2169', 'saragilbert@gmail.com'),
-(DEFAULT, 'Connor', 'Becky', '714 Delaware St', 'Landford', 'IL', '60290', '813-998-1239', 'whichbeckyami@gmail.com'),
-(DEFAULT, 'Simpson', 'Homer', '742 Evergreen Ter', 'Springfield', 'OR', '97477''541-123-4567', 'chunkylover53@aol.com'),
-(DEFAULT, 'Simpson', 'Lisa', '742 Evergreen Ter', 'Springfield', 'OR', '97477', '541-123-7654', 'smartgirl63@yahoo.com'),
-(DEFAULT, 'Simpson', 'Bart', '742 Evergreen Ter', 'Springfield', 'OR', '97477', '541-123-9999', 'bart.simpson@hotmail.com')
+(DEFAULT, 'Doe', 'Jane', '123 Fake St', 'Tampa', 'FL', '33617', '813-998-2199', 'janed@gmail.com', --1
+(DEFAULT, 'Doe', 'Joe', '123 Fake St', 'Tampa', 'FL', '33617', '813-998-2101', 'joedoe@gmail.com'), --2
+(DEFAULT, 'Brady', 'Marsha', '12568 Real St', 'Seattle', 'WA', '98101', '206-397-1000', 'marshamarshamarsha@gmail.com'), --3
+(DEFAULT, 'Brady', 'Bobby', '12568 Real St', 'Seattle', 'WA', '98101', '206-397-1001', 'bobbyb@gmail.com'), --4
+(DEFAULT, 'Brady', 'Greg', '12568 Real St', 'Seattle', 'WA', '98101', '206-397-1002', 'bradybunchrulz@gmail.com'), --5
+(DEFAULT, 'Brady', 'Tiger', '12568 Real St', 'Seattle', 'WA', '98101', '206-397-1003', 'tigerthedog@gmail.com'), --6
+(DEFAULT, 'Connor', 'Roseanne', '714 Delaware St', 'Landford', 'IL', '60, '773-978-6669', 'yor@gmail.com'), --7
+(DEFAULT, 'Connor', 'Darlene', '714 Delaware St', 'Landford', 'IL', '60290', '773-918-2169', 'saragilbert@gmail.com'), --8
+(DEFAULT, 'Connor', 'Becky', '714 Delaware St', 'Landford', 'IL', '60290', '813-998-1239', 'whichbeckyami@gmail.com'), --9
+(DEFAULT, 'Simpson', 'Homer', '742 Evergreen Ter', 'Springfield', 'OR', '97477''541-123-4567', 'chunkylover53@aol.com'), --10
+(DEFAULT, 'Simpson', 'Lisa', '742 Evergreen Ter', 'Springfield', 'OR', '97477', '541-123-7654', 'smartgirl63@yahoo.com'), --11
+(DEFAULT, 'Simpson', 'Bart', '742 Evergreen Ter', 'Springfield', 'OR', '97477', '541-123-9999', 'bart.simpson@hotmail.com') --12
 
 --Employee test data
 INSERT INTO Employee (Employeekey, EmployeeNameLast, EmployeeNameFirst)
 VALUES
-(DEFAULT, 'di Prima', 'Diane'),
-(DEFAULT, 'Joplin', 'Janis'),
-(DEFAULT, 'Garcia', 'Jerry')
+(DEFAULT, 'di Prima', 'Diane'), --1
+(DEFAULT, 'Joplin', 'Janis'), --2
+(DEFAULT, 'Garcia', 'Jerry') --3
 
 --POS test data
 INSERT INTO PointOfSale (posKey, posLocation, posDateTime, posID, customerKey, employeeKey)
 VALUES
-(DEFAULT, 'SEAcpR1', 2016-02-14 14:23:56, 'AeFAdFXOkl', 1, 3),
-(DEFAULT, 'SEAcpR2', 2016-02-14 14:32:01, 'vKvKqi4uyW', 2, 2),
-(DEFAULT, 'SEAcpR2', 2016-02-14 15:14:13, 'si5v2Kz9LD', 3, 2),
-(DEFAULT, 'SEAcpR1', 2016-02-14 16:00:14, 'AWCfAU6BuE', 4, 3),
-(DEFAULT, 'SEAcpR3', 2016-02-14 16:37:22, 'TtGiEQEoTv', 5, 1),
-(DEFAULT, 'SEAcpR3', 2016-02-15 09:45:33, 'z2HrP7e9z5', 6, 1),
-(DEFAULT, 'SEAcpR3', 2016-02-15 12:02:48, 'lJPDcqt0cD', 7, 1),
-(DEFAULT, 'SEAcpR1', 2016-02-15 12:12:41, 'kbE3JgnNIl', 8, 2),
-(DEFAULT, 'SEAcpR1', 2016-02-15 13:15:14, 'uUKb9vW57p', 9, 2),
-(DEFAULT, 'SEAcpR2', 2016-02-15 13:33:53, 'pjNpq3n10F', 10, 3)
+(DEFAULT, 'SEAcpR1', 2016-02-14 14:23:56, 'AeFAdFXOkl', 1, 3), --1
+(DEFAULT, 'SEAcpR2', 2016-02-14 14:32:01, 'vKvKqi4uyW', 2, 2), --2
+(DEFAULT, 'SEAcpR2', 2016-02-14 15:14:13, 'si5v2Kz9LD', 3, 2), --3
+(DEFAULT, 'SEAcpR1', 2016-02-14 16:00:14, 'AWCfAU6BuE', 4, 3), --4
+(DEFAULT, 'SEAcpR3', 2016-02-14 16:37:22, 'TtGiEQEoTv', 5, 1), --5
+(DEFAULT, 'SEAcpR3', 2016-02-15 09:45:33, 'z2HrP7e9z5', 6, 1), --6 
+(DEFAULT, 'SEAcpR3', 2016-02-15 12:02:48, 'lJPDcqt0cD', 7, 1), --7
+(DEFAULT, 'SEAcpR1', 2016-02-15 12:12:41, 'kbE3JgnNIl', 8, 2), --8
+(DEFAULT, 'SEAcpR1', 2016-02-15 13:15:14, 'uUKb9vW57p', 9, 2), --9
+(DEFAULT, 'SEAcpR2', 2016-02-15 13:33:53, 'pjNpq3n10F', 10, 3) --10
 
 --Sales test data
 INSERT INTO SaleDetail (salesKey, albumKey, salesQty, salesTax, salesPrice, posKey)
 VALUES 
-(DEFAULT, 2, 1, 1.42, 14.99, 1),
-(DEFAULT, 4, 1, 1.61, 16.99, 2),
-(DEFAULT, 5, 2, 1.42, 14.99, 3),
-(DEFAULT, 8, 1, 2.28, 24.00, 4),
-(DEFAULT, 7, 1, 1.90, 19.99, 5),
-(DEFAULT, 9, 2, 1.90, 19.98, 6),
-(DEFAULT, 6, 1, 1.75, 18.41, 7),
-(DEFAULT, 3, 1, 1.95, 20.53, 8),
-(DEFAULT, 1, 1, 1.61, 16.99, 9),
-(DEFAULT, 10,1, 1.90, 19.99, 10)
+(DEFAULT, 2, 1, 1.42, 14.99, 1), --1
+(DEFAULT, 4, 1, 1.61, 16.99, 2), --2
+(DEFAULT, 5, 2, 1.42, 14.99, 3), --3
+(DEFAULT, 8, 1, 2.28, 24.00, 4), --4
+(DEFAULT, 7, 1, 1.90, 19.99, 5), --5
+(DEFAULT, 9, 2, 1.90, 19.98, 6), --6
+(DEFAULT, 6, 1, 1.75, 18.41, 7), --7
+(DEFAULT, 3, 1, 1.95, 20.53, 8), --8
+(DEFAULT, 1, 1, 1.61, 16.99, 9), --9
+(DEFAULT, 10,1, 1.90, 19.99, 10) --10
