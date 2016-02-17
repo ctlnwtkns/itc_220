@@ -1,36 +1,56 @@
 --INSERT statements:
 --Data From Bob Boilen's Top 10 Albums Of 2015
 
---1. Courtney Barnett, 'Sometimes I Sit and Think, And Sometimes I Just Sit'
---2. Sufjan Stevens, 'Carrie & Lowell'
---3. Eskimeaux, 'O.K.'
---4. Joan Shelley, 'Over And Even'
---5. Torres, 'Sprinter'
---6. Björk, 'Vulnicura'
---7. SOAK, 'Before We Forgot How To Dream'
---8. Ólafur Arnalds & Alice Sara Ott, 'The Chopin Project
---9. Girlpool, 'Before The World Was Big'
---10. Ibeyi, 'Ibeyi'
+--1. Courtney Barnett, 'Sometimes I Sit and Think, And Sometimes I Just Sit', Indie Rock
+--2. Sufjan Stevens, 'Carrie & Lowell', Indie Rock, Indie Folk
+--3. Eskimeaux, 'O.K.', Ethereal Pop, Indie Folk
+--4. Joan Shelley, 'Over And Even', Traditional Folk
+--5. Torres, 'Sprinter', Rock
+--6. Björk, 'Vulnicura', Electronic, Avant Garde, Classical Crossover, 
+--7. SOAK, 'Before We Forgot How To Dream', Indie Folk, Dream Pop
+--8. Ólafur Arnalds & Alice Sara Ott, 'The Chopin Project, Classical
+--9. Girlpool, 'Before The World Was Big', Folk Punk
+--10. Ibeyi, 'Ibeyi', Downtempo, Soul, R&B, Experimental
 
 --artist test data
 INSERT INTO Artist (artistKey, artistNameLast, artistNameFirst, artistAlias)
 VALUES 
-(DEFAULT, 'Barnett', 'Courtney', 'NULL'), 
-(DEFAULT, 'Stevens', 'Sufjan', NULL),
-(DEFAULT, 'Smith', 'Gabrielle', 'Eskimeuax'),
-(DEFAULT, 'Kalb', 'Oliver', 'Eskimeuax'),
-(DEFAULT, 'Walworth', 'Felix', 'Eskimeuax'),
-(DEFAULT, 'Greenleaf', 'Jack', 'Eskimeuax'),
-(DEFAULT, 'Shelly', 'Joan', NULL),
-(DEFAULT, 'Scott', 'Mackenzie', 'Torres'),
-(DEFAULT, 'Guðmundsdóttir', 'Björk', 'Björk'),
-(DEFAULT, 'Monds-Watson', 'Bridie', 'SOAK'),
-(DEFAULT, 'Arnalds', 'Ólafur', NULL),
-(DEFAULT, 'Ott', 'Alice Sara', NULL),
-(DEFAULT, 'Tucker', 'Cleo', 'Girlpool'),
-(DEFAULT, 'Tividad', ' Harmony', 'Girlpool'),
-(DEFAULT, 'Diaz', 'Lisa-Kaindé', 'Ibeyi'),
-(DEFAULT, 'Diaz', 'Naomi', 'Ibeyi')
+(DEFAULT, 'Barnett', 'Courtney', 'NULL'), --1
+(DEFAULT, 'Stevens', 'Sufjan', NULL), --2
+(DEFAULT, 'Smith', 'Gabrielle', 'Eskimeuax'), --3
+(DEFAULT, 'Kalb', 'Oliver', 'Eskimeuax'), --4
+(DEFAULT, 'Walworth', 'Felix', 'Eskimeuax'), --5
+(DEFAULT, 'Greenleaf', 'Jack', 'Eskimeuax'), --6
+(DEFAULT, 'Shelly', 'Joan', NULL), --7
+(DEFAULT, 'Scott', 'Mackenzie', 'Torres'), --8
+(DEFAULT, 'Guðmundsdóttir', 'Björk', 'Björk'), --9
+(DEFAULT, 'Monds-Watson', 'Bridie', 'SOAK'), --10
+(DEFAULT, 'Arnalds', 'Ólafur', NULL), --11
+(DEFAULT, 'Ott', 'Alice Sara', NULL), --12
+(DEFAULT, 'Tucker', 'Cleo', 'Girlpool'), --13
+(DEFAULT, 'Tividad', ' Harmony', 'Girlpool'), --14
+(DEFAULT, 'Diaz', 'Lisa-Kaindé', 'Ibeyi'), --15
+(DEFAULT, 'Diaz', 'Naomi', 'Ibeyi') --16
+
+--genre look-up
+INSERT INTO Genre (genreKey, genreName)
+VALUES
+(DEFAULT, 'Indie Rock'), --1
+(DEFAULT, 'Indie Folk'), --2
+(DEFAULT, 'Ethereal Pop'), --3
+(DEFAULT, 'Traditional Folk'), --4
+(DEFAULT, 'Rock'), --5
+(DEFAULT, 'Electronic'), --6
+(DEFAULT, 'Avant Garde'), --7
+(DEFAULT, 'Classical Crossover'), --8
+(DEFAULT, 'Ambient'), --9
+(DEFAULT, 'Dream Pop'), --10
+(DEFAULT, 'Classical'), --11
+(DEFAULT, 'Folk Punk'), --12
+(DEFAULT, 'Downtempo'), --13
+(DEFAULT, 'Soul'), --14
+(DEFAULT, 'R&B'), --15
+(DEFAULT), 'Experimental') --16
 
 --speed look-up
 --https://rateyourmusic.com/wiki/Music:Release+attributes#Speed
@@ -67,16 +87,79 @@ VALUES
 --album test data
 INSERT INTO Album (albumKey, albumName, catalogNo, storeItemNo, speedKey, sizeKey)
 VALUES 
-(DEFAULT, 'Sometimes I Sit and Think, And Sometimes I Just Sit', ),
-(DEFAULT, 'Carrie & Lowell', ),
-(DEFAULT, 'O.K.', ),
-(DEFAULT, 'Over And Even', ),
-(DEFAULT, 'Sprinter', ),
-(DEFAULT, 'Vulnicura', ),
-(DEFAULT, 'Before We Forgot How To Dream', ),
-(DEFAULT, 'The Chopin Project', ),
-(DEFAULT, 'Before The World Was Big', ),
-(DEFAULT, 'Ibeyi', )
+(DEFAULT, 'Sometimes I Sit and Think, And Sometimes I Just Sit', ), --1
+(DEFAULT, 'Carrie & Lowell', ), --2
+(DEFAULT, 'O.K.', ), --3
+(DEFAULT, 'Over And Even', ), --4
+(DEFAULT, 'Sprinter', ), --5
+(DEFAULT, 'Vulnicura', ), --6
+(DEFAULT, 'Before We Forgot How To Dream', ), --7
+(DEFAULT, 'The Chopin Project', ), --8
+(DEFAULT, 'Before The World Was Big', ), --9
+(DEFAULT, 'Ibeyi', ) --10
+
+--releaseDate test data
+INSERT INTO releaseDate (releaseDateKey, releaseDate)
+VALUES
+(),
+(),
+(),
+(),
+(),(),
+--artistAlbum
+INSERT INTO artistAlbum (artistKey, albumKey)
+VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 3),
+(5, 3),
+(6, 3),
+(7, 4),
+(8, 5),
+(9, 6),
+(10, 7),
+(11, 8),
+(12, 8),
+(13, 9),
+(14, 9),
+(15, 10),
+(16, 10)
+
+--artistGenre test data
+INSERT INTO artistGenre (artistKey, genreKey)
+VALUES
+(1, 1), 
+(2, 1), 
+(2, 2),
+(3, 2),
+(3, 3),
+(4, 2),
+(4, 3),
+(5, 2),
+(5, 3),
+(6, 2),
+(6, 3),
+(7, 4), 
+(8, 5), 
+(9, 6),
+(9, 7),
+(9, 8),
+(9, 9),
+(10, 1),
+(10, 10),
+(11, 11), 
+(12, 11), 
+(13, 12), 
+(14, 12), 
+(15, 13), 
+(15, 14),
+(15, 15),
+(15, 16),
+(16, 13), 
+(16, 14), 
+(16, 15),
+(16, 16)
 
 --Customer test data
 INSERT INTO Customer (CustomerKey,customerLastName, customerFirstName, customerAddress, customerCity, customerState, customerZip, customerPhone, customerEmail) 
