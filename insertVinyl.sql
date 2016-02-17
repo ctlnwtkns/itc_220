@@ -101,11 +101,19 @@ VALUES
 --releaseDate test data
 INSERT INTO releaseDate (releaseDateKey, releaseDate)
 VALUES
-(),
-(),
-(),
-(),
-(),(),
+(DEFALUT, 2006), --1
+(DEFAUT,  2007), --2
+(DEFAULT, 2008), --3
+(DEFAULT, 2009), --4
+(DEFAULT, 2010), --5 
+(DEFAULT, 2011), --6
+(DEFAULT, 2012), --7
+(DEFAULT, 2013), --8
+(DEFAULT, 2014), --9
+(DEFAULT, 2015), --9
+(DEFAULT, 2016)  --10
+
+
 --artistAlbum
 INSERT INTO artistAlbum (artistKey, albumKey)
 VALUES
