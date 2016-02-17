@@ -136,8 +136,44 @@ VALUES
 (10, 9)
 
 --Condition look-up
+INSERT INTO CoverCondition (rating, description)
+VALUES
+('5', 'New'), --1
+('4', 'Like new), --2
+('3', 'Good'), --3
+
+INSERT INTO AlbumCondition (rating, description)
+('Mint','perfect or near perfect'), --1
+('Very Good', 'faint scratches and/or surface marks; still highly collectable'), --2
+('Good', 'some scratches and/or surface marks; minimal surface noise') --3
 
 --AlbumCondition test data
+INSERT INTO AlbumCondition (albumKey, albumConditionKey)
+VALUES
+(1, ),
+(2, ),
+(3, ),
+(4, ),
+(5, ),
+(6, ),
+(7, ),
+(8, ),
+(9, ),
+(10, )
+
+--AlbumCondition test data
+INSERT INTO CoverCondition (albumKey, coverConditionKey)
+VALUES
+(1, ),
+(2, ),
+(3, ),
+(4, ),
+(5, ),
+(6, ),
+(7, ),
+(8, ),
+(9, ),
+(10, )
 
 
 --artistGenre test data
