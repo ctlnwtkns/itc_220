@@ -110,7 +110,7 @@ Create table PointOfSale
 	(
 	posKey int IDENTITY(1,1) PRIMARY KEY,
 	posLocation varchar(255) NOT NULL,
-	posDateTime timestamp NOT NULL,
+	posDateTime smalldatetime NOT NULL,
 	posID varchar(255) NOT NULL,
   	customerKey int REFERENCES Customer(customerKey),
 	employeeKey int REFERENCES Employee(employeeKey),
