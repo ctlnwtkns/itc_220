@@ -147,34 +147,19 @@ INSERT INTO AlbumCondition (rating, description)
 ('Very Good', 'faint scratches and/or surface marks; still highly collectable'), --2
 ('Good', 'some scratches and/or surface marks; minimal surface noise') --3
 
---AlbumCondition test data
-INSERT INTO AlbumCondition (albumKey, albumConditionKey)
+--AlbumcoverCondition test data
+INSERT INTO AlbumCoverCondition (albumKey, coverConditionKey, albumConditionKey)
 VALUES
-(1, ),
-(2, ),
-(3, ),
-(4, ),
-(5, ),
-(6, ),
-(7, ),
-(8, ),
-(9, ),
-(10, )
-
---AlbumCondition test data
-INSERT INTO CoverCondition (albumKey, coverConditionKey)
-VALUES
-(1, ),
-(2, ),
-(3, ),
-(4, ),
-(5, ),
-(6, ),
-(7, ),
-(8, ),
-(9, ),
-(10, )
-
+(1, 2, 1),
+(2, 1, 3),
+(3, 3, 2),
+(4, 1, 1),
+(5, 3, 2),
+(6, 1, 2),
+(7, 3, 2),
+(8, 2, 1),
+(9, 1, 1),
+(10, 1, 2)
 
 --artistGenre test data
 INSERT INTO artistGenre (artistKey, genreKey)
