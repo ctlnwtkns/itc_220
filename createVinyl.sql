@@ -73,8 +73,8 @@ Create table AlbumCondition
 Create table AlbumCoverCondition
 	(
 	albumKey int REFERENCES Album(albumKey),
-	coverConditionKey int REFERENCES Condition (conditionKey),
-	albumConditionKey
+	coverConditionKey int REFERENCES CoverCondition (coverConditionKey),
+	albumConditionKey int REFERENCES AlbumCondition (albumConditionKey)
 	PRIMARY KEY(albumKey, coverConditionKey, albumConditionKey)
 	)
 	
