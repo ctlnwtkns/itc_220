@@ -74,17 +74,17 @@ VALUES
 
 --album test data
 INSERT INTO Album (albumName, catalogNo, storeItemNo, speedKey, sizeKey)
-VALUES 
-( 'Sometimes I Sit and Think, And Sometimes I Just Sit', 'xxx', 'xxx', 2, 3), --1
-( 'Carrie & Lowell', ), --2
-( 'O.K.', ), --3
-( 'Over And Even', ), --4
-( 'Sprinter', ), --5
-( 'Vulnicura', ), --6
-( 'Before We Forgot How To Dream', ), --7
-( 'The Chopin Project', ), --8
-( 'Before The World Was Big', ), --9
-( 'Ibeyi', ) --10
+VALUES
+( 'Sometimes I Sit and Think, And Sometimes I Just Sit', 'HA0036LPX','293001',3,2 ), --1
+( 'Carrie & Lowell','AKR099', '490788',2,3 ), --2
+( 'O.K.','DDW027','208605',2,3 ), --3
+( 'Over And Even','NOQ-047','231890',2,3 ), --4
+( 'Sprinter','PODCD0809','449739',3,1 ), --5
+( 'Vulnicura','tplp1231dl','350262',2,3 ), --6
+( 'Before We Forgot How To Dream','RTRADLP743','287455',2,3 ), --7
+( 'The Chopin Project', '28948114863','495563',2,3), --8
+( 'Before The World Was Big','WEBB450LP','466447',2,3 ), --9
+( 'Ibeyi', 'XLCD665','306586',2,3 ) --10
 
 INSERT INTO releaseDate (releaseDate)
 VALUES
