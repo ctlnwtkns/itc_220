@@ -69,7 +69,7 @@ Create table AlbumQuality
 	PRIMARY KEY(albumKey , qualityKey)
 	)
 
-Create table CoverCondition
+Create table CoverQuality
   	(
 	albumKey int REFERENCES Album(albumKey),
 	qualityKey int REFERENCES Quality(qualityKey),
