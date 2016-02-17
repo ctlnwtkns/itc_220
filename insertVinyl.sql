@@ -143,6 +143,7 @@ VALUES
 ('3', 'Good') --3
 
 INSERT INTO AlbumCondition (rating, description)
+VALUES
 ('Mint','perfect or near perfect'), --1
 ('Very Good', 'faint scratches and/or surface marks; still highly collectable'), --2
 ('Good', 'some scratches and/or surface marks; minimal surface noise') --3
