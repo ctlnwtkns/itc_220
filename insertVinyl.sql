@@ -84,6 +84,7 @@ VALUES
 ('200 gram'), --6
 ('220 gram')  --7
 
+
 --album test data
 INSERT INTO Album (albumName, catalogNo, storeItemNo, speedKey, sizeKey)
 VALUES 
@@ -134,6 +135,16 @@ VALUES
 (16, 10)
 
 --AlbumQuality
+INSERT INTO AlbumQuality (albumKey, qualityKey)
+VALUES
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
 --CoverQuality
 --CoverYear
 
