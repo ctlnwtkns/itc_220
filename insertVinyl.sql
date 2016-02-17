@@ -56,7 +56,7 @@ VALUES
 --https://rateyourmusic.com/wiki/Music:Release+attributes#Speed
 INSERT INTO Speed (speed)
 VALUES
-('16 rpm'), --1
+( '16 rpm'), --1
 ( '33 rpm'), --2
 ( '45 rpm'), --3
 ( '78 rpm'), --4
@@ -70,25 +70,12 @@ INSERT INTO Size (size)
 VALUES
 ('7 inch'), --1
 ('10 inch'), --2
-( '12 inch') --3
-
---quality look-up
---https://rateyourmusic.com/wiki/Music:Release+attributes#Quality
-INSERT INTO Quality (weight)
-VALUES
-('120 gram'), --1
-('140 gram'), --2
-('150 gram'), --3
-('160 gram'), --4
-('180 gram'), --5
-('200 gram'), --6
-('220 gram')  --7
-
+('12 inch') --3
 
 --album test data
 INSERT INTO Album (albumName, catalogNo, storeItemNo, speedKey, sizeKey)
 VALUES 
-( 'Sometimes I Sit and Think, And Sometimes I Just Sit', ), --1
+( 'Sometimes I Sit and Think, And Sometimes I Just Sit', 'xxx', 'xxx', 2, 3), --1
 ( 'Carrie & Lowell', ), --2
 ( 'O.K.', ), --3
 ( 'Over And Even', ), --4
@@ -134,20 +121,6 @@ VALUES
 (15, 10),
 (16, 10)
 
---AlbumQuality
-INSERT INTO AlbumQuality (albumKey, qualityKey)
-VALUES
-(1, ),
-(2, ),
-(3, ),
-(4, ),
-(5, ),
-(6, ),
-(7, ),
-(8, ),
-(9, ),
-(10, )
-
 --AlbumYear
 INSERT INTO AlbumYear (albumKey, releaseDateKey)
 VALUES
@@ -162,9 +135,9 @@ VALUES
 (9, 9),
 (10, 9)
 
---Cover look-up
+--Condition look-up
 
---CoverCondition test data
+--AlbumCondition test data
 
 
 --artistGenre test data
