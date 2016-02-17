@@ -61,6 +61,12 @@ Create table Quality
 	qualityKey int IDENTITY(1,1) PRIMARY KEY,
 	weight varchar(255) NOT NULL,
   	)
+  
+  Create table Condition
+  	(
+	conditionKey int IDENTITY(1,1) PRIMARY KEY,
+	rating varchar(255) NOT NULL,
+  	)	
   	
 Create table AlbumQuality
 	(
@@ -69,7 +75,7 @@ Create table AlbumQuality
 	PRIMARY KEY(albumKey , qualityKey)
 	)
 
-Create table CoverQuality
+Create table CoverCondition
   	(
 	albumKey int REFERENCES Album(albumKey),
 	qualityKey int REFERENCES Quality(qualityKey),
