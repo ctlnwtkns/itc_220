@@ -80,7 +80,7 @@ Create table CoverCondition
 	albumKey int REFERENCES Album(albumKey),
 	qualityKey int REFERENCES Quality(qualityKey),
 	sizeKey int REFERENCES Size(sizeKey),
-	PRIMARY KEY(albumKey , qualityKey , sizeKey)
+	PRIMARY KEY(albumKey , conditionKey , sizeKey)
   	)
 
 Create table AlbumYear
