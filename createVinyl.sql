@@ -56,32 +56,18 @@ Create table ArtistGenre
 	PRIMARY KEY(artistKey , genreKey)
 	)
 
-Create table Quality
-  	(
-	qualityKey int IDENTITY(1,1) PRIMARY KEY,
-	weight varchar(255) NOT NULL,
-  	)
-  
-  Create table Condition
+Create table Condition
   	(
 	conditionKey int IDENTITY(1,1) PRIMARY KEY,
-	rating varchar(255) NOT NULL,
+	description varchar(255) NOT NULL,
   	)	
   	
-Create table AlbumQuality
+Create table AlbumCondition
 	(
 	albumKey int REFERENCES Album(albumKey),
-	qualityKey int REFERENCES Quality(qualityKey),
-	PRIMARY KEY(albumKey , qualityKey)
+	conditionKey int REFERENCES Condition (conditionKey),
+	PRIMARY KEY(albumKey , conditionKey)
 	)
-
-Create table CoverCondition
-  	(
-	albumKey int REFERENCES Album(albumKey),
-	qualityKey int REFERENCES Quality(qualityKey),
-	sizeKey int REFERENCES Size(sizeKey),
-	PRIMARY KEY(albumKey , conditionKey , sizeKey)
-  	)
 
 Create table AlbumYear
   	(
