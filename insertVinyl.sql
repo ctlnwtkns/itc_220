@@ -44,8 +44,6 @@ VALUES
 (DEFAULT, '3¾ IPS'), 
 (DEFAULT, '7½ IPS') 
 
-
-
 --size look-up
 --http://xvinylx.com/wiki/Record_size
 INSERT INTO Size (sizeKey, size)
@@ -65,7 +63,6 @@ VALUES
 (DEFAULT, '180 gram'),
 (DEFAULT, '200 gram'),
 (DEFAULT, '220 gram')
-
 
 --album test data
 INSERT INTO Album (albumKey, albumName, catalogNo, storeItemNo, speedKey, sizeKey)
@@ -90,8 +87,7 @@ VALUES
 (DEFAULT, 'Brady', 'Bobby', '12568 Real St', 'Seattle', 'WA', '98101', '206-397-1001', 'bobbyb@gmail.com'),
 (DEFAULT, 'Brady', 'Greg', '12568 Real St', 'Seattle', 'WA', '98101', '206-397-1002', 'bradybunchrulz@gmail.com'),
 (DEFAULT, 'Brady', 'Tiger', '12568 Real St', 'Seattle', 'WA', '98101', '206-397-1003', 'tigerthedog@gmail.com'),
-(DEFAULT, 'Connor', 'Roseanne', '714 Delaware St', 'Landford', 'IL', '60290', '773-978-2159', 'roseanneconway@gmail.com'),
-(DEFAULT, 'Connor', 'Dan', '714 Delaware St', 'Landford', 'IL', '60290', '773-978-6669', 'yor@gmail.com'),
+(DEFAULT, 'Connor', 'Roseanne', '714 Delaware St', 'Landford', 'IL', '60, '773-978-6669', 'yor@gmail.com'),
 (DEFAULT, 'Connor', 'Darlene', '714 Delaware St', 'Landford', 'IL', '60290', '773-918-2169', 'saragilbert@gmail.com'),
 (DEFAULT, 'Connor', 'Becky', '714 Delaware St', 'Landford', 'IL', '60290', '813-998-1239', 'whichbeckyami@gmail.com'),
 (DEFAULT, 'Simpson', 'Homer', '742 Evergreen Ter', 'Springfield', 'OR', '97477''541-123-4567', 'chunkylover53@aol.com'),
@@ -105,16 +101,30 @@ VALUES
 (DEFAULT, 'Joplin', 'Janis'),
 (DEFAULT, 'Garcia', 'Jerry')
 
+--POS test data
+INSERT INTO PointOfSale (posKey, posLocation, posDateTime, posID, customerKey, employeeKey)
+VALUES
+(DEFAULT, 'SEAcpR1', 2016-02-14 14:23:56, 'AeFAdFXOkl', 1, 3),
+(DEFAULT, 'SEAcpR2', 2016-02-14 14:32:01, 'vKvKqi4uyW', 2, 2),
+(DEFAULT, 'SEAcpR2', 2016-02-14 15:14:13, 'si5v2Kz9LD', 3, 2),
+(DEFAULT, 'SEAcpR1', 2016-02-14 16:00:14, 'AWCfAU6BuE', 4, 3),
+(DEFAULT, 'SEAcpR3', 2016-02-14 16:37:22, 'TtGiEQEoTv', 5, 1),
+(DEFAULT, 'SEAcpR3', 2016-02-15 09:45:33, 'z2HrP7e9z5', 6, 1),
+(DEFAULT, 'SEAcpR3', 2016-02-15 12:02:48, 'lJPDcqt0cD', 7, 1),
+(DEFAULT, 'SEAcpR1', 2016-02-15 12:12:41, 'kbE3JgnNIl', 8, 2),
+(DEFAULT, 'SEAcpR1', 2016-02-15 13:15:14, 'uUKb9vW57p', 9, 2),
+(DEFAULT, 'SEAcpR2', 2016-02-15 13:33:53, 'pjNpq3n10F', 10, 3)
+
 --Sales test data
 INSERT INTO SaleDetail (salesKey, albumKey, salesQty, salesTax, salesPrice, posKey)
 VALUES 
-(DEFAULT, 2, 1, 1.42, 14.99, ),
-(DEFAULT, 4, 1, , 1.61, 16.99 ),
-(DEFAULT, 5, 2, 1.42, 14.99, ),
-(DEFAULT, 8, 1, 2.28, 24.00, ),
-(DEFAULT, 7, 1, 1.90, 19.99, ),
-(DEFAULT, 9, 2, , , ),
-(DEFAULT, 6, 1, , , ),
-(DEFAULT, 3, 1, , , ),
-(DEFAULT, 1, 1, , , ),
-(DEFAULT, 10, 1 , , , )
+(DEFAULT, 2, 1, 1.42, 14.99, 1),
+(DEFAULT, 4, 1, 1.61, 16.99, 2),
+(DEFAULT, 5, 2, 1.42, 14.99, 3),
+(DEFAULT, 8, 1, 2.28, 24.00, 4),
+(DEFAULT, 7, 1, 1.90, 19.99, 5),
+(DEFAULT, 9, 2, 1.90, 19.98, 6),
+(DEFAULT, 6, 1, 1.75, 18.41, 7),
+(DEFAULT, 3, 1, 1.95, 20.53, 8),
+(DEFAULT, 1, 1, 1.61, 16.99, 9),
+(DEFAULT, 10,1, 1.90, 19.99, 10)
