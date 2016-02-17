@@ -213,7 +213,7 @@ VALUES
 ( 'SEAcpR2', '2016-02-15 13:33:53', 'pjNpq3n10F', 10, 3) --10
 
 --Sales test data
-INSERT INTO SaleDetail (albumKey, salesQty, salesTax, salesPrice, posKey)
+INSERT INTO SalesDetail (albumKey, salesQty, salesTax, salesPrice, posKey)
 VALUES 
 ( 2, 1, 1.42, 14.99, 1), --1
 ( 4, 1, 1.61, 16.99, 2), --2
