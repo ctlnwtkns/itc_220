@@ -13,9 +13,23 @@ ORDER BY albumName, storeItemNo
   --(AlbumCondition, CoverCondition, Speed, Size). 
 --One table per value comprising a range of markers indicating condition. 
   --(rating, description)
+SELECT *
+FROM Speed
+
+SELECT * 
+FROM Size
+
+SELECT * 
+FROM AlbumCondition
+
+SELECT * 
+FROM CoverCondition
 
 --Each unique album must be related to a list of those attributes that are used to determine the album’s market value 
 --(AlbumCoverCondition). 
+
+SELECT * 
+FROM AlbumCoverCondition
 
 --Only the store owners will have access to the array of values that determine each album’s worth, while the customers will only see the retail price and description of its condition.
 --(This would is beyond scope for database design)
