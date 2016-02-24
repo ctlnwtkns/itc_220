@@ -58,15 +58,23 @@ WHERE sd.albumKey IN
 |Before The World Was Big	|2	|20	|2016-02-15 09:46:00 |Brady	|Tiger
 
 
+Query for album mint condition.
+```SQL
+select  albumName
+from AlbumCondition AC 
+join AlbumCoverCondition FOO on AC.albumConditionKey = FOO.albumConditionKey 
+join album Name on Name.albumkey = FOO.albumKey
+where rating = 'mint'
+```
+|albumName|
+|---|
+|Sometimes I Sit and Think, And Sometimes I Just Sit
+|Over And Even
+|The Chopin Project
+|Before The World Was Big
 
-
-The values for determining condition will be stored in lookup tables 
-
-
-The database will track how many of what type of album in which condition(s) have been bought and sold within a given time frame. 
-
-
-
+Each unique album must be related to a list of those attributes that are used to determine the album’s market value. (One too many relationship)
+	Run a query to show the lookup table info?  
 
 
 
