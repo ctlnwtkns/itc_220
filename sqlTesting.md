@@ -18,7 +18,7 @@ ORDER BY albumName, storeItemNo
 |8	|The Chopin Project	|28948114863	|495563
 |6	|Vulnicura	|tplp1231dl	|350262
 
-Display condition of most valuable album in stock
+Display specs of most valuable album in stock
 ```sql
 SELECT AlbumName, catalogNo, storeItemNo, size, speed, cc.description AS CoverCondition, ac.description AS AlbumCondition
 FROM AlbumCoverCondition aac
