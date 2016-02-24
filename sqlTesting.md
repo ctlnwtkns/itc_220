@@ -37,10 +37,11 @@ WHERE cc.rating = 5 AND ac.rating = 'Mint'
 
 In addition to storing purchase price, the database will record the date/time and from whence/whom each album was acquired. 
 ```sql
-SELECT AlbumName, salesQty, salesPrice, posDateTime
+SELECT AlbumName, salesQty, salesPrice, posDateTime, customerLastName, customerFirstName
 FROM SalesDetail sd
 JOIN PointOfSale pos ON pos.posKey = sd.posKey
 JOIN Album a ON a.albumKey = sd.albumkey
+JOIN Customer c ON c.customerKey = pos.customerKey
 WHERE sd.albumKey IN 
   (
     SELECT aac.albumkey
@@ -51,10 +52,13 @@ WHERE sd.albumKey IN
     WHERE cc.rating = 5 AND ac.rating = 'Mint'
     )
 ```
-|AlbumName|salesQty|salesPrice|posDateTime|
-|---|---|---|---|
-|Over And Even	|1	|17	|2016-02-14 14:32:00
-|Before The World Was Big	|2	|20	|2016-02-15 09:46:00
+|AlbumName|salesQty|salesPrice|posDateTime|customerLastName|customerFirstName
+|---|---|---|---|---|---|
+|Over And Even	|1	|17	|2016-02-14 14:32:00 |Doe	|Joe
+|Before The World Was Big	|2	|20	|2016-02-15 09:46:00 |Brady	|Tiger
+
+
+
 
 The values for determining condition will be stored in lookup tables 
 
