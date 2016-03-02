@@ -1,0 +1,71 @@
+CREATE DATABASE Apartment
+
+USE Apartment
+
+CREATE TABLE Tenant
+(
+tenant int IDENTITY(1,1) PRIMARY KEY,
+tenantNameLast varchar(255),
+tenantNameFirst varchar(255),
+tenantDOB DATE,
+tenantSSN varchar(11)
+)
+
+CREATE TABLE Lease
+(
+lease int IDENTITY(1,1) PRIMARY KEY,
+leaseDateStart DATE,
+leaseDateEnd DATE,
+leaseType varchar (50),
+leaseAmt varchar(10)
+)
+
+CREATE TABLE MaintCost
+(
+maintCost int IDENTITY(1,1) PRIMARY KEY,
+maintType varchar (255),
+maintCostTotal varchar (255),
+maintDateAssessed DATE,
+maintDatePaid DATE
+)
+
+CREATE TABLE MaintType
+(
+maintType int IDENTITY(1,1) PRIMARY KEY,
+normal varchar (255),
+damage varchar (255)
+)
+
+CREATE TABLE leaseType
+(
+leaseType int IDENTITY(1,1) PRIMARY KEY,
+sixMo varchar (255),
+twelveMo varchar (255)
+)
+
+CREATE TABLE RentPaid
+(
+rentPaid int IDENTITY(1,1) PRIMARY KEY,
+rentDateDue DATE,
+rentDateReceived DATE
+)
+
+CREATE TABLE Apt
+(
+apt int IDENTITY(1,1) PRIMARY KEY,
+aptNo varchar(50)
+)
+
+CREATE TABLE AptMaint
+(
+aptMaint int IDENTITY(1,1) PRIMARY KEY,
+
+)
+
+CREATE TABLE TenantLease
+(
+tenantLease int IDENTITY(1,1) PRIMARY KEY,
+
+
+)
+
