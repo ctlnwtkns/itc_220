@@ -33,6 +33,12 @@ leaseAmt varchar(10),
 aptKey int REFERENCES Apt (aptKey)
 )
 
+CREATE TABLE MaintType
+(
+maintTypeKey int IDENTITY(1,1) PRIMARY KEY,
+maintType varchar (50)
+)
+
 CREATE TABLE MaintCost
 (
 maintCostKey int IDENTITY(1,1) PRIMARY KEY,
@@ -41,13 +47,6 @@ maintCostTotal varchar (255),
 maintDateAssessed DATE,
 maintDatePaid DATE
 )
-
-CREATE TABLE MaintType
-(
-maintTypeKey int IDENTITY(1,1) PRIMARY KEY,
-maintType varchar (50)
-)
-
 
 CREATE TABLE TenantLease
 (
