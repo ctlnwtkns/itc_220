@@ -28,7 +28,7 @@ CREATE TABLE Lease
 leaseKey int IDENTITY(1,1) PRIMARY KEY,
 leaseDateStart DATE,
 leaseDateEnd DATE,
-leaseTypeKey varchar (50) REFERENCES LeaseType (leaseTypeKey),
+leaseTypeKey int REFERENCES LeaseType (leaseTypeKey),
 leaseAmt varchar(10),
 aptKey int REFERENCES Apt (aptKey)
 )
