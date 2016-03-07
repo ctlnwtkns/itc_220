@@ -24,7 +24,7 @@ leaseDateStart DATE,
 leaseDateEnd DATE,
 leaseTypeKey varchar (50) REFERENCES LeaseType (leaseTypeKey),
 leaseAmt varchar(10),
-aptKey (int) REFERENCES Apt (aptKey)
+aptKey int REFERENCES Apt (aptKey)
 )
 
 CREATE TABLE MaintCost
@@ -61,7 +61,7 @@ CREATE TABLE RentPaid
 rentPaid int IDENTITY(1,1) PRIMARY KEY,
 rentDateDue DATE,
 rentDateReceived DATE,
-tenantLeaseKey (int) REFERENCES TenantLease (tenantLeaseKey)
+tenantLeaseKey int REFERENCES TenantLease (tenantLeaseKey)
 )
 
 
@@ -69,7 +69,7 @@ CREATE TABLE AptMaint
 (
 aptMaintKey int IDENTITY(1,1) PRIMARY KEY,
 maintCostKey int REFERENCES maintCost(maintCostKey),
-aptKey in REFERENCES Apt(aptKey)
+aptKey int REFERENCES Apt(aptKey)
 )
 
 
