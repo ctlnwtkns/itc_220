@@ -42,7 +42,7 @@ maintTypeKey int IDENTITY(1,1) PRIMARY KEY,
 maintType varchar (50)
 )
 
-CREATE TABLE leaseType
+CREATE TABLE LeaseType
 (
 leaseTypeKey int IDENTITY(1,1) PRIMARY KEY,
 leaseType varchar (50)
