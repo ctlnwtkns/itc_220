@@ -31,16 +31,16 @@ maintDatePaid DATE
 
 CREATE TABLE MaintType
 (
-maintType int IDENTITY(1,1) PRIMARY KEY,
-normal varchar (255),
-damage varchar (255)
+maintTypeKey int IDENTITY(1,1) PRIMARY KEY,
+maintType varchar (255),
+description varchar (255)
 )
 
 CREATE TABLE leaseType
 (
-leaseType int IDENTITY(1,1) PRIMARY KEY,
-sixMo varchar (255),
-twelveMo varchar (255)
+leaseTypeKey int IDENTITY(1,1) PRIMARY KEY,
+leaseType varchar (255),
+description varchar (255)
 )
 
 CREATE TABLE RentPaid
