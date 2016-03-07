@@ -36,7 +36,7 @@ aptKey int REFERENCES Apt (aptKey)
 CREATE TABLE MaintCost
 (
 maintCostKey int IDENTITY(1,1) PRIMARY KEY,
-maintType varchar (255),
+maintTypeKey int REFERENCES maintType (maintTypeKey),
 maintCostTotal varchar (255),
 maintDateAssessed DATE,
 maintDatePaid DATE
