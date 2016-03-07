@@ -17,6 +17,12 @@ aptKey int IDENTITY(1,1) PRIMARY KEY,
 aptNo varchar(50)
 )
 
+CREATE TABLE LeaseType
+(
+leaseTypeKey int IDENTITY(1,1) PRIMARY KEY,
+leaseType varchar (50)
+)
+
 CREATE TABLE Lease
 (
 leaseKey int IDENTITY(1,1) PRIMARY KEY,
@@ -42,11 +48,6 @@ maintTypeKey int IDENTITY(1,1) PRIMARY KEY,
 maintType varchar (50)
 )
 
-CREATE TABLE LeaseType
-(
-leaseTypeKey int IDENTITY(1,1) PRIMARY KEY,
-leaseType varchar (50)
-)
 
 CREATE TABLE TenantLease
 (
