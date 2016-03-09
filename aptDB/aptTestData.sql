@@ -1,20 +1,20 @@
 --Apt
-INSERT INTO Apt (aptKey, aptNo)
-VALUES  (DEFAULT, 101),
-        (DEFAULT, 102),
-        (DEFAULT, 103),
-        (DEFAULT, 201),
-        (DEFAULT, 202),
-        (DEFAULT, 203),
-        (DEFAULT, 301),
-        (DEFAULT, 302),
-        (DEFAULT, 303),
-        (DEFAULT, 401),
-        (DEFAULT, 402),
-        (DEFAULT, 403),
-        (DEFAULT, 501),
-        (DEFAULT, 502),
-        (DEFAULT, 503)
+INSERT INTO Apt (aptNo)
+VALUES  (101),
+        (102),
+        (103),
+        (201),
+        (202),
+        (203),
+        (301),
+        (302),
+        (303),
+        (401),
+        (402),
+        (403),
+        (501),
+        (502),
+        (503)
         
 
 
