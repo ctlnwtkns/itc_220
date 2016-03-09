@@ -58,7 +58,7 @@ leaseKey int REFERENCES Lease(leaseKey)
 
 CREATE TABLE RentPaid
 (
-rentPaid int IDENTITY(1,1) PRIMARY KEY,
+rentPaidKey int IDENTITY(1,1) PRIMARY KEY,
 rentDateDue DATE,
 rentDateReceived DATE,
 tenantLeaseKey int REFERENCES TenantLease (tenantLeaseKey)
