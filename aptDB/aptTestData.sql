@@ -36,207 +36,113 @@ VALUES  (1, 1, 1),
         (14, 14, 14),
         (15, 15, 15)
 
---        Query to get rentDateDue from Lease
---        SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
---        FROM Lease b
---        WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
---        AND tenantLeaseKey = (SELECT tenantLeaseKey FROM tenantLease a WHERE a.leaseKey = b.leaseKey) --for whatever lease matches the tenantLeaseKey stored as current value
-
 --RentPaid
-INSERT INTO RentPaid (tenantLeaseKey, rentDateDue, rentDateReceived) 
-VALUES  (  
-          ( SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
-            FROM Lease b
-            WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
-            AND tenantLeaseKey = (
-                      SELECT tenantLeaseKey 
-                      FROM tenantLease a 
-                      WHERE a.leaseKey = b.leaseKey)
-          ),
-          DATEPART(YYYY-MM-DD, GETDATE()), 
-          12
+INSERT INTO RentPaid (tenantLeaseKey, rentDateDue, rentDateReceived)
+VALUES (13, 
+        (SELECT CONCAT(YEAR(GETDATE()), '-', MONTH(GETDATE()), '-', DAY(leaseDateStart)) AS rentDateDue 
+         FROM Lease b
+         WHERE GETDATE() BETWEEN leaseDateStart AND leaseDateEnd 
+         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 13)),
+        GETDATE()
         ),
-        (  
-          ( SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
-            FROM Lease b
-            WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
-            AND tenantLeaseKey = (
-                      SELECT tenantLeaseKey 
-                      FROM tenantLease a 
-                      WHERE a.leaseKey = b.leaseKey)
-          ),
-          DATEPART(YYYY-MM-DD, GETDATE()), 
-          2
+        (11, 
+        (SELECT CONCAT(YEAR(GETDATE()), '-', MONTH(GETDATE()), '-', DAY(leaseDateStart)) AS rentDateDue 
+         FROM Lease b
+         WHERE GETDATE() BETWEEN leaseDateStart AND leaseDateEnd 
+         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 11)),
+        GETDATE()
         ),
-        (  
-          ( SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
-            FROM Lease b
-            WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
-            AND tenantLeaseKey = (
-                      SELECT tenantLeaseKey 
-                      FROM tenantLease a 
-                      WHERE a.leaseKey = b.leaseKey)
-          ),
-          DATEPART(YYYY-MM-DD, GETDATE()), 
-          8
+         (2, 
+        (SELECT CONCAT(YEAR(GETDATE()), '-', MONTH(GETDATE()), '-', DAY(leaseDateStart)) AS rentDateDue 
+         FROM Lease b
+         WHERE GETDATE() BETWEEN leaseDateStart AND leaseDateEnd 
+         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 2)),
+        GETDATE()
         ),
-        (
-          ( SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
-            FROM Lease b
-            WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
-            AND tenantLeaseKey = (
-                      SELECT tenantLeaseKey 
-                      FROM tenantLease a 
-                      WHERE a.leaseKey = b.leaseKey)
-          ),
-          DATEPART(YYYY-MM-DD, GETDATE()), 
-          4
+         (7, 
+        (SELECT CONCAT(YEAR(GETDATE()), '-', MONTH(GETDATE()), '-', DAY(leaseDateStart)) AS rentDateDue 
+         FROM Lease b
+         WHERE GETDATE() BETWEEN leaseDateStart AND leaseDateEnd 
+         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 7)),
+        GETDATE()
         ),
-        (
-          ( SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
-            FROM Lease b
-            WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
-            AND tenantLeaseKey = (
-                      SELECT tenantLeaseKey 
-                      FROM tenantLease a 
-                      WHERE a.leaseKey = b.leaseKey)
-          ),
-          DATEPART(YYYY-MM-DD, GETDATE()), 
-          7
+         (8, 
+        (SELECT CONCAT(YEAR(GETDATE()), '-', MONTH(GETDATE()), '-', DAY(leaseDateStart)) AS rentDateDue 
+         FROM Lease b
+         WHERE GETDATE() BETWEEN leaseDateStart AND leaseDateEnd 
+         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 8)),
+        GETDATE()
         ),
-        (
-          ( SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
-            FROM Lease b
-            WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
-            AND tenantLeaseKey = (
-                      SELECT tenantLeaseKey 
-                      FROM tenantLease a 
-                      WHERE a.leaseKey = b.leaseKey)
-          ),
-          DATEPART(YYYY-MM-DD, GETDATE()), 
-          13
+         (15, 
+        (SELECT CONCAT(YEAR(GETDATE()), '-', MONTH(GETDATE()), '-', DAY(leaseDateStart)) AS rentDateDue 
+         FROM Lease b
+         WHERE GETDATE() BETWEEN leaseDateStart AND leaseDateEnd 
+         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 15)),
+        GETDATE()
         ),
-        (
-          ( SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
-            FROM Lease b
-            WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
-            AND tenantLeaseKey = (
-                      SELECT tenantLeaseKey 
-                      FROM tenantLease a 
-                      WHERE a.leaseKey = b.leaseKey)
-          ),
-          DATEPART(YYYY-MM-DD, GETDATE()), 
-          10
+         (3, 
+        (SELECT CONCAT(YEAR(GETDATE()), '-', MONTH(GETDATE()), '-', DAY(leaseDateStart)) AS rentDateDue 
+         FROM Lease b
+         WHERE GETDATE() BETWEEN leaseDateStart AND leaseDateEnd 
+         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 3)),
+        GETDATE()
         ),
-        ( 
-          ( SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
-            FROM Lease b
-            WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
-            AND tenantLeaseKey = (
-                      SELECT tenantLeaseKey 
-                      FROM tenantLease a 
-                      WHERE a.leaseKey = b.leaseKey)
-          ),
-          DATEPART(YYYY-MM-DD, GETDATE()), 
-          5
+         (5, 
+        (SELECT CONCAT(YEAR(GETDATE()), '-', MONTH(GETDATE()), '-', DAY(leaseDateStart)) AS rentDateDue 
+         FROM Lease b
+         WHERE GETDATE() BETWEEN leaseDateStart AND leaseDateEnd 
+         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 5)),
+        GETDATE()
         ),
-        (
-          ( SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
-            FROM Lease b
-            WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
-            AND tenantLeaseKey = (
-                      SELECT tenantLeaseKey 
-                      FROM tenantLease a 
-                      WHERE a.leaseKey = b.leaseKey)
-          ),
-          DATEPART(YYYY-MM-DD, GETDATE()), 
-          15
+         (14, 
+        (SELECT CONCAT(YEAR(GETDATE()), '-', MONTH(GETDATE()), '-', DAY(leaseDateStart)) AS rentDateDue 
+         FROM Lease b
+         WHERE GETDATE() BETWEEN leaseDateStart AND leaseDateEnd 
+         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 14)),
+        GETDATE()
         ),
-        ( 
-          ( SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
-            FROM Lease b
-            WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
-            AND tenantLeaseKey = (
-                      SELECT tenantLeaseKey 
-                      FROM tenantLease a 
-                      WHERE a.leaseKey = b.leaseKey)
-          ),
-          DATEPART(YYYY-MM-DD, GETDATE()), 
-          6
+        (9, 
+        (SELECT CONCAT(YEAR(GETDATE()), '-', MONTH(GETDATE()), '-', DAY(leaseDateStart)) AS rentDateDue 
+         FROM Lease b
+         WHERE GETDATE() BETWEEN leaseDateStart AND leaseDateEnd 
+         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 9)),
+        GETDATE()
         ),
-        ( 
-          ( SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
-            FROM Lease b
-            WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
-            AND tenantLeaseKey = (
-                      SELECT tenantLeaseKey 
-                      FROM tenantLease a 
-                      WHERE a.leaseKey = b.leaseKey)
-          ),
-          DATEPART(YYYY-MM-DD, GETDATE()), 
-          3
+        (10, 
+        (SELECT CONCAT(YEAR(GETDATE()), '-', MONTH(GETDATE()), '-', DAY(leaseDateStart)) AS rentDateDue 
+         FROM Lease b
+         WHERE GETDATE() BETWEEN leaseDateStart AND leaseDateEnd 
+         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 10)),
+        GETDATE()
         ),
-        ( 
-          ( SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
-            FROM Lease b
-            WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
-            AND tenantLeaseKey = (
-                      SELECT tenantLeaseKey 
-                      FROM tenantLease a 
-                      WHERE a.leaseKey = b.leaseKey)
-          ),
-          DATEPART(YYYY-MM-DD, GETDATE()), 
-          7
+        (12, 
+        (SELECT CONCAT(YEAR(GETDATE()), '-', MONTH(GETDATE()), '-', DAY(leaseDateStart)) AS rentDateDue 
+         FROM Lease b
+         WHERE GETDATE() BETWEEN leaseDateStart AND leaseDateEnd 
+         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 12)),
+        GETDATE()
         ),
-        ( 
-          ( SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
-            FROM Lease b
-            WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
-            AND tenantLeaseKey = (
-                      SELECT tenantLeaseKey 
-                      FROM tenantLease a 
-                      WHERE a.leaseKey = b.leaseKey)
-          ),
-          DATEPART(YYYY-MM-DD, GETDATE()), 
-          14
+        (4, 
+        (SELECT CONCAT(YEAR(GETDATE()), '-', MONTH(GETDATE()), '-', DAY(leaseDateStart)) AS rentDateDue 
+         FROM Lease b
+         WHERE GETDATE() BETWEEN leaseDateStart AND leaseDateEnd 
+         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 4)),
+        GETDATE()
         ),
-        ( 
-          ( SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
-            FROM Lease b
-            WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
-            AND tenantLeaseKey = (
-                      SELECT tenantLeaseKey 
-                      FROM tenantLease a 
-                      WHERE a.leaseKey = b.leaseKey)
-          ),
-          DATEPART(YYYY-MM-DD, GETDATE()), 
-          11
+        (6, 
+        (SELECT CONCAT(YEAR(GETDATE()), '-', MONTH(GETDATE()), '-', DAY(leaseDateStart)) AS rentDateDue 
+         FROM Lease b
+         WHERE GETDATE() BETWEEN leaseDateStart AND leaseDateEnd 
+         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 6)),
+        GETDATE()
         ),
-        (  
-          ( SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
-            FROM Lease b
-            WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
-            AND tenantLeaseKey = (
-                      SELECT tenantLeaseKey 
-                      FROM tenantLease a 
-                      WHERE a.leaseKey = b.leaseKey)
-          ),
-          DATEPART(YYYY-MM-DD, GETDATE()), 
-          1
-        ),
-        (  
-          ( SELECT (DATEPART(YYYY-MM, CURDATE()) + '-' + DATEPART(DD, leaseDateStart)) AS rentDateDue --the same day of whatever current month as the least start date
-            FROM Lease b
-            WHERE CURDATE() BETWEEN leaseDateStart AND leaseDateEnd
-            AND tenantLeaseKey = (
-                      SELECT tenantLeaseKey 
-                      FROM tenantLease a 
-                      WHERE a.leaseKey = b.leaseKey)
-          ),
-          DATEPART(YYYY-MM-DD, GETDATE()), 
-          9
+        (1, 
+        (SELECT CONCAT(YEAR(GETDATE()), '-', MONTH(GETDATE()), '-', DAY(leaseDateStart)) AS rentDateDue 
+         FROM Lease b
+         WHERE GETDATE() BETWEEN leaseDateStart AND leaseDateEnd 
+         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 1)),
+        GETDATE()
         )
-
 
 --AptMaint
 INSERT INTO AptMaint (maintCostKey, aptKey) 
