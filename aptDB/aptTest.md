@@ -27,10 +27,29 @@ ORDER BY tenantNameLast
 |12 months	|Simpson	|Maggie
   
 ###Query for past due rents: apt, lease, overdue time
-```sql
-SELECT
-FROM
-```
+SELECT aptNo, leaseAMt, rentDateDue, rentDateReceived
+FROM TenantLease b
+JOIN Apt a ON a.aptkey = b.aptkey
+JOIN Lease c ON c.leasekey =b.leaseKey
+JOIN RentPaid d ON d.tenantLeaseKey =b.tenantLeaseKey
+
+|aptNo| leaseAmt| rentDateDue | rentDateReceived|
+|---| ---| ---| ---|
+501 |1000.00	|2016-03-01	|2016-03-14
+402	|1000.00	|2016-03-01	|2016-03-14
+102	|1200.00	|2016-03-01	|2016-03-14
+301	|1400.00	|2016-03-01	|2016-03-14
+302	|1400.00	|2016-03-01	|2016-03-14
+503	|1000.00	|2016-03-01	|2016-03-14
+103	|1300.00	|2016-03-01	|2016-03-14
+202	|1400.00	|2016-03-01	|2016-03-14
+502	|1100.00	|2016-03-01	|2016-03-14
+303	|1200.00	|2016-03-01	|2016-03-14
+401	|1300.00	|2016-03-01	|2016-03-14
+403	|1100.00	|2016-03-01	|2016-03-14
+201	|1400.00	|2016-03-01	|2016-03-14
+203	|1400.00	|2016-03-01	|2016-03-14
+101	|1100.00	|2016-03-01	|2016-03-14
 
 ###Query for dollar amount of rent collected by month for 6 and 12 months
 ```sql
