@@ -174,11 +174,11 @@ VALUES (13,
          AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 6)),
         GETDATE()
         ),
-        (1, 
+        (16, 
         (SELECT CONCAT(YEAR(GETDATE()), '-', MONTH(GETDATE()), '-', DAY(leaseDateStart)) AS rentDateDue 
          FROM Lease b
          WHERE GETDATE() BETWEEN leaseDateStart AND leaseDateEnd 
-         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 1)),
+         AND leaseKey = (SELECT leaseKey FROM tenantLease a WHERE a.tenantleaseKey = 16)),
         GETDATE()
         )
 
