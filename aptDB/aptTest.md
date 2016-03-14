@@ -115,8 +115,32 @@ FROM
 ```
 
 ###Query for apt number and lease end dates within one year
-```sql
-SELECT
-FROM
-```
+
+SELECT aptNo, leaseDateStart, leasedateEnd
+FROM TenantLease b
+JOIN Apt a ON a.aptkey = b.aptkey
+JOIN Lease c ON c.leasekey =b.leaseKey
+JOIN RentPaid d ON d.tenantLeaseKey =b.tenantLeaseKey
+
+|aptNo|leaseDateStart|leaseDateEnd|
+|---|---|---|
+501| 2010-10-01 |2016-09-30
+402| 2010-10-01 |2016-09-30
+102|	2013-10-01 |	2016-09-30
+301|	2015-10-01 |	2016-09-30
+302|	2015-10-01|	2016-09-30
+503|	2010-10-01|	2016-09-30
+103|	2012-10-01|	2016-09-30
+202|	2015-10-01|	2016-09-30
+502|	2011-10-01|	2016-09-30
+303|	2013-10-01|	2016-09-30
+401|	2014-10-01|	2016-09-30
+403|2011-10-01| 2016-09-30
+201|2015-10-01 |	2016-09-30
+203|	2015-10-01 |	2016-09-30
+101	|2011-10-01 |	2016-09-30
+
+
+
+
 
