@@ -27,11 +27,13 @@ ORDER BY tenantNameLast
 |12 months	|Simpson	|Maggie
   
 ###Query for past due rents: apt, lease, overdue time
+```sql
 SELECT aptNo, leaseAMt, rentDateDue, rentDateReceived
 FROM TenantLease b
 JOIN Apt a ON a.aptkey = b.aptkey
 JOIN Lease c ON c.leasekey =b.leaseKey
 JOIN RentPaid d ON d.tenantLeaseKey =b.tenantLeaseKey
+```
 
 |aptNo| leaseAmt| rentDateDue | rentDateReceived|
 |---| ---| ---| ---|
