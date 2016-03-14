@@ -112,9 +112,15 @@ ORDER BY tenantNameLast
 
 ###Query for apartment vacancies. List all apartments with no lease?
 ```sql
-SELECT
-FROM
+select leaseDateStart,leaseDateEnd 
+from Lease
+where leaseDateEnd is not null and 
+leaseDateStart >= getdate()
 ```
+
+|leaseDateStart| leaseDateEnd|
+| --- | --- |
+
 
 ###Query for apt number and lease end dates within one year
 ```sql
