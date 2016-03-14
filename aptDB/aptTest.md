@@ -117,12 +117,13 @@ FROM
 ```
 
 ###Query for apt number and lease end dates within one year
-
+```sql
 SELECT aptNo, leaseDateStart, leasedateEnd
 FROM TenantLease b
 JOIN Apt a ON a.aptkey = b.aptkey
 JOIN Lease c ON c.leasekey =b.leaseKey
 JOIN RentPaid d ON d.tenantLeaseKey =b.tenantLeaseKey
+```
 
 |aptNo|leaseDateStart|leaseDateEnd|
 |---|---|---|
@@ -141,7 +142,6 @@ JOIN RentPaid d ON d.tenantLeaseKey =b.tenantLeaseKey
 201|2015-10-01 |	2016-09-30
 203|	2015-10-01 |	2016-09-30
 101	|2011-10-01 |	2016-09-30
-
 
 
 
