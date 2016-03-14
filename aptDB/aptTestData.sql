@@ -58,7 +58,7 @@ VALUES
 
 --TenantLease
 INSERT INTO TenantLease (aptKey, tenantKey, leaseKey) 
-VALUES  (1, 1, 1),
+VALUES  (1, 1, 16),
         (2, 2, 2),
         (3, 3, 3),
         (4, 4, 4),
