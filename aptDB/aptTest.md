@@ -3,10 +3,6 @@
 SELECT
 FROM
 ``
-
-  select tenant, apt, leases from ?
-
-  Show tenants with multiple leases (years). Lastname, Apt. #, leases
   
 ###Query for past due rents: apt, lease, overdue time
 ``sql
@@ -16,7 +12,7 @@ FROM
 
 ###Query for dollar amount of rent collected by month for 6 and 12 months
 ``sql
-SELECT
+SELECT 
 FROM
 ``
 
